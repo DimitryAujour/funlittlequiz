@@ -1,87 +1,90 @@
-.icon-container {
-    text-align: center;
-    margin-bottom: 1rem;
+.questionnaire-container {
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(243, 229, 245, 0.9);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4a148c;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .icon-container {
+    text-align: center;
+    margin-bottom: 2rem;
   }
   
   .question-icon {
-    color: whitesmoke;
-    width: 100px;
-    height: auto;
+    font-size: 4rem;
+    color: #7b1fa2;
   }
   
   .options-container {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    
-  }
-  
-  .li {
-    width: 100%;
+    margin: 0;
   }
   
   .option-button {
     width: 100%;
-    font-weight: bolder;
-    padding: 1rem;
-    font-size: 1rem;
-    background-color: #a18cd1;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #9c27b0;
     color: white;
-    border: 0.3rem solid white;
-    border-radius: 5px;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    height: 3.5rem; /* Add fixed height for all buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .option-button:hover {
-    background-color: #8e7ac0;
+    background-color: #7b1fa2;
+    transform: scale(1.02);
   }
   
-  .h2 {
-    padding: 1rem 0; 
-    font-weight: bold;
-  }
-  
-  @media (min-width: 600px) {
-    .options-container {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  
-    .li {
-      flex: 0 0 calc(50% - 0.5rem);
-    }
-  }
-  
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     .questionnaire-container {
-      padding: 1rem;
-      background-color: aliceblue;
+      padding: 1.5rem;
     }
   
-    .h2 {
+    .question-title {
       font-size: 1.5rem;
-      font-weight: bold;
-      padding: 1rem 0; /* Adjust padding for smaller screens */
+    }
+  
+    .question-icon {
+      font-size: 3rem;
     }
   
     .option-button {
-      padding: 0.8rem;
-      border: 2rem solid white;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .questionnaire-container {
+      padding: 1rem;
+    }
+  
+    .question-title {
+      font-size: 1.3rem;
+    }
+  
+    .question-icon {
+      font-size: 2.5rem;
+    }
+  
+    .option-button {
+      padding: 0.6rem 0.8rem;
       font-size: 0.9rem;
-      height: 3rem; /* Adjust height for smaller screens */
     }
   }

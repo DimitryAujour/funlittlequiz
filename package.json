@@ -14,7 +14,9 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "next": "14.2.6",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "^6.1.12",
+    "tailwind": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
